@@ -26,16 +26,16 @@ export class SearchBarComponent implements OnInit {
     const book = form.value.book;
     this.typeBooks = book;
     localStorage.setItem('searchTerm', this.typeBooks);
-    this.apiService.getData(this.typeBooks).subscribe(
-      (data: any) => {
+    this.apiService.getData(this.typeBooks).subscribe({
+      next: (data: any) => {
         this.book = data.works;
         this.error = '';
       },
-      (error) => {
+      error: (error) => {
         if ((error.status = 404)) {
           this.error = 'You must input a type of book or this type is invalid';
         }
-      }
-    );
+      },
+    });
   }
 }
