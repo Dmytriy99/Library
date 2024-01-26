@@ -11,12 +11,18 @@ export class BookComponent implements OnInit {
   description!: string;
   title!: string;
   authors!: string;
+  error: string = '';
   constructor(private route: ActivatedRoute, private apiService: ApiService) {}
   ngOnInit(): void {
     this.key = this.route.snapshot.paramMap.get('id')!;
-    this.apiService.getKey(this.key).subscribe((data: any) => {
-      this.description = data.description.value || data.description;
-      this.title = data.title;
+    this.apiService.getKey(this.key).subscribe({
+      next: (data: any) => {
+        this.description = data?.description?.value || data?.description;
+        this.title = data.title;
+        if (!this.description) {
+          this.error = 'There is no description';
+        }
+      },
     });
   }
 }
