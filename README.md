@@ -44,5 +44,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## ScreenShot
 
-![app-screenshot](/src/assets/Screenshot%202024-01-26%20143556.png)
-![app-screenshot](/src/assets/Screenshot%202024-01-26%20143612.png)
+![app-screenshot](/src/assets/Screenshot%20app1.png)
+![app-screenshot](/src/assets/Screenshot%20app2.png.png)
