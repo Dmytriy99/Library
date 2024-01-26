@@ -1,0 +1,13 @@
+mat-card {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+button {
+  margin-top: 30px;
+  background-color: darkmagenta;
+}
+div {
+  text-align: center;
+}
