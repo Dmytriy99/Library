@@ -1,4 +1,8 @@
-# Angular2
+# Library
+
+Library allows users to search some types of book like fantasy,horror......Also users can click at the inspect button to read the description of the book.
+
+You can try the demo here: (https://library-52dc4.firebaseapp.com/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
 

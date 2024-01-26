@@ -12,9 +12,6 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { of } from 'rxjs';
-import { Router } from '@angular/router';
-import { ApiService } from 'src/app/service/api.service';
 
 describe('SearchBarComponent', () => {
   let component: SearchBarComponent;
