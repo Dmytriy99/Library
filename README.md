@@ -6,6 +6,18 @@ You can try the demo here: (https://library-52dc4.firebaseapp.com/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
 
+## Cors Problem
+
+To avoid the CORS problem i recommend installing a browser extension, for example this one: https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf
+
+## Install
+
+run `npm intall` on your device for try the application.
+
+## Angular Material
+
+To install Angular Material run `ng add @angular/material`.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
