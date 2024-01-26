@@ -11,7 +11,7 @@ import { ApiService } from 'src/app/service/api.service';
 export class SearchBarComponent implements OnInit {
   error: string = '';
   typeBooks!: string;
-  constructor(private router: Router, private apiService: ApiService) {}
+  constructor(private apiService: ApiService) {}
   book: any;
   title!: string;
   selectedTerm: string = localStorage.getItem('searchTerm')!;
@@ -19,14 +19,12 @@ export class SearchBarComponent implements OnInit {
     if (this.selectedTerm) {
       this.apiService.getData(this.selectedTerm).subscribe((data: any) => {
         this.book = data.works;
-        console.log(this.selectedTerm);
       });
     }
   }
   onSearch(form: NgForm) {
     const book = form.value.book;
     this.typeBooks = book;
-    console.log(this.typeBooks);
     localStorage.setItem('searchTerm', this.typeBooks);
     this.apiService.getData(this.typeBooks).subscribe(
       (data: any) => {

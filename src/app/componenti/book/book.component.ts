@@ -14,9 +14,7 @@ export class BookComponent implements OnInit {
   constructor(private route: ActivatedRoute, private apiService: ApiService) {}
   ngOnInit(): void {
     this.key = this.route.snapshot.paramMap.get('id')!;
-    console.log(this.key);
     this.apiService.getKey(this.key).subscribe((data: any) => {
-      console.log(data);
       this.description = data.description.value || data.description;
       this.title = data.title;
     });
