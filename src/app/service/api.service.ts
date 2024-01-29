@@ -4,8 +4,6 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class ApiService {
-  urlCategories: string =
-    'https://api.teleport.org/api/urban_areas/slug:los-angeles/ ';
   constructor(private http: HttpClient) {}
   getData(type: string) {
     return this.http.get(`https://openlibrary.org/subjects/${type}.json`);

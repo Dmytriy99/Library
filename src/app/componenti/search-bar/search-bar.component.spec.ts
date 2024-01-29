@@ -45,12 +45,10 @@ describe('SearchBarComponent', () => {
   });
 
   it('should call apiService.getData on onSearch', fakeAsync(() => {
-    // Arrange
     const formValue = { book: 'exampleBook' };
     const testData = { works: ['book1', 'book2'] };
     apiService.getData.and.returnValue(of(testData));
 
-    // Act
     component.onSearch({ value: formValue } as any);
     tick();
 
@@ -61,15 +59,12 @@ describe('SearchBarComponent', () => {
   }));
 
   it('should handle error on apiService.getData on onSearch', fakeAsync(() => {
-    // Arrange
     const formValue = { book: 'exampleBook' };
     apiService.getData.and.returnValue(throwError({ status: 404 }));
 
-    // Act
     component.onSearch({ value: formValue } as any);
     tick();
 
-    // Assert
     expect(apiService.getData).toHaveBeenCalledWith('exampleBook');
     expect(component.book).toBeUndefined();
     expect(component.error).toBe(
