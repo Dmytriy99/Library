@@ -9,6 +9,6 @@ export class ApiService {
     return this.http.get(`https://openlibrary.org/subjects/${type}.json`);
   }
   getKey(key: string) {
-    return this.http.get(`https://openlibrary.org${key}`);
+    return this.http.get(`https://openlibrary.org${key}.json`);
   }
 }
