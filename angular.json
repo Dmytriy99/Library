@@ -60,7 +60,7 @@
             },
             "development": {
               "browserTarget": "angular2:build:development",
-              "proxyConfig": "src/proxy.conf.json"
+              "proxyConfig": "src/app/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
