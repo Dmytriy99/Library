@@ -25,8 +25,8 @@ export class SearchBarComponent implements OnInit {
   onSearch(form: NgForm) {
     const book = form.value.book;
     this.typeBooks = book;
-    localStorage.setItem('searchTerm', this.typeBooks.toLowerCase());
-    this.apiService.getData(this.typeBooks.toLowerCase()).subscribe({
+    localStorage.setItem('searchTerm', this.typeBooks.toLowerCase().trim());
+    this.apiService.getData(this.typeBooks.toLowerCase().trim()).subscribe({
       next: (data: any) => {
         this.book = data.works;
         this.error = '';
