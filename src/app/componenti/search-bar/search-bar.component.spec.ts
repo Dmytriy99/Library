@@ -45,7 +45,7 @@ describe('SearchBarComponent', () => {
   });
 
   it('should call apiService.getData on onSearch', fakeAsync(() => {
-    const formValue = { book: 'exampleBook' };
+    const formValue = { book: 'ExampleBook' };
     const testData = { works: ['book1', 'book2'] };
     apiService.getData.and.returnValue(of(testData));
 
@@ -53,7 +53,7 @@ describe('SearchBarComponent', () => {
     tick();
 
     // Assert
-    expect(apiService.getData).toHaveBeenCalledWith('exampleBook');
+    expect(apiService.getData).toHaveBeenCalledWith('examplebook');
     expect(component.book).toEqual(testData.works);
     expect(component.error).toBe('');
   }));
@@ -65,7 +65,7 @@ describe('SearchBarComponent', () => {
     component.onSearch({ value: formValue } as any);
     tick();
 
-    expect(apiService.getData).toHaveBeenCalledWith('exampleBook');
+    expect(apiService.getData).toHaveBeenCalledWith('examplebook');
     expect(component.book).toBeUndefined();
     expect(component.error).toBe(
       'You must input a type of book or this type is invalid'
